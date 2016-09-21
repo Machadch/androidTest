@@ -25,10 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>mx =0;
-my=0;
-mxs=0;
-mys=0;
+            <string>global.sx=0;
+global.sy=0;
+global.ex=0;
+global.ey=0;
+global.mx=0;
+global.my=0;
+global.mxs=0;
+global.mys=0;
+global.inst=0;
 swipe=false;
 swipe_time=0;
 swipe_speed=0;
@@ -57,21 +62,21 @@ swipe_speed=0;
             <string>if mouse_check_button_pressed(mb_left){
     swipe = true;
     draw = true;
-    mxs = mouse_x;
-    mys = mouse_y;
+    global.mxs = mouse_x;
+    global.mys = mouse_y;
     }
 if swipe = true{
-    mx = mouse_x;
-    my = mouse_y;
+    global.mx = mouse_x;
+    global.my = mouse_y;
     swipe_time++;
     if mouse_check_button_released(mb_left){
         swipe = false;
-        swipe_speed = point_distance (mxs,mys,mx,my)/swipe_time;
+        swipe_speed = point_distance (global.mxs,global.mys,global.mx,global.my)/swipe_time;
         swipe_time = 0;
-        var i = scr_Swipe_Check(mxs,mys,mx,my); 
+        var i = scr_Swipe_Check(global.mxs,global.mys,global.mx,global.my); 
             with (i) {
                 speed = other.swipe_speed;
-                direction=point_direction(other.mxs,other.mys,other.mx,other.my);
+                direction=point_direction(global.mxs,global.mys,global.mx,global.my);
                 }
             }
         }
@@ -98,7 +103,7 @@ if swipe = true{
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_red);
-draw_line(mxs,mys,mx,my);
+draw_line(global.mxs,global.mys,global.mx,global.my);
 draw_set_color(c_black);
 draw_text(8,8,swipe);
 draw_text(8,32,swipe_speed);

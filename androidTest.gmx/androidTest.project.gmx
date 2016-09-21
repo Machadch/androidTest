@@ -16,7 +16,7 @@
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
-    <object>objects\pbj_swipeControl</object>
+    <object>objects\obj_swipeControl</object>
     <object>objects\obj_wall</object>
   </objects>
   <rooms name="rooms">

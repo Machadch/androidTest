@@ -1,6 +1,6 @@
-sx=argument0;
-sy=argument1;
-ex=argument2;
-ey=argument3;
-inst = collision_line(sx,sy,et,ey,obj_player,true,true);
-return inst;
+global.sx=argument0;
+global.sy=argument1;
+global.ex=argument2;
+global.ey=argument3;
+global.inst = collision_line(global.sx,global.sy,global.ex,global.ey,obj_player,true,true);
+return global.inst;
