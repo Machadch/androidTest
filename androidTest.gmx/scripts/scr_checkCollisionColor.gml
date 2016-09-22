@@ -10,5 +10,11 @@ with(obj_player){
     instance_destroy();
     break;
     }
-instance_destroy();
+if (global.life > 0) {
+        global.life -= 1;
+        instance_create(384,832,obj_player)
+    }
+else {
+    instance_create(room_width/2,room_height/2,obj_gameOver);
+    }
 }

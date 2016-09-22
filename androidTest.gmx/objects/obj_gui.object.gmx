@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,34 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 90;
-global.spawnColumn = 0;
-global.life = 2
-instance_create(384,832,obj_player);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>scr_spawnYinYang(irandom(3));
-alarm[0] = 71;
+            <string>draw_set_font(fnt_text)
+draw_set_color(c_black)
+draw_text(33,928,"Lives:")
+for(i = 0; i &lt; global.life; i++) {
+    gapSize = (sprite_get_width(spr_lifeIcon) * i); 
+    xPos = 125; 
+    yPos = 928; 
+    draw_sprite(spr_lifeIcon, 0, (xPos + gapSize), yPos);
+  }
 </string>
           </argument>
         </arguments>

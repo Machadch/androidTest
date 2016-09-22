@@ -9,9 +9,11 @@
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_playerBlack</sprite>
+    <sprite>sprites\spr_lifeIcon</sprite>
     <sprite>sprites\spr_playerWhite</sprite>
     <sprite>sprites\spr_blackBullet</sprite>
     <sprite>sprites\spr_whiteBullet</sprite>
+    <sprite>sprites\spr_gameOver</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -20,14 +22,19 @@
     <script>scripts\scr_checkCollisionColor.gml</script>
     <script>scripts\scr_spawnYinYang.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_text</font>
+  </fonts>
   <objects name="objects">
+    <object>objects\obj_gui</object>
     <object>objects\obj_player</object>
     <object>objects\obj_swipeControl</object>
     <object>objects\obj_wall</object>
-    <object>objects\obj_enemy</object>
+    <object>objects\obj_enemyYinYang</object>
     <object>objects\obj_bulletBlack</object>
     <object>objects\obj_bulletWhite</object>
     <object>objects\obj_spawner</object>
+    <object>objects\obj_gameOver</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_playField</room>
