@@ -68,18 +68,21 @@ swipe_speed=0;
 if swipe = true{
     global.mx = mouse_x;
     global.my = mouse_y;
-    swipe_time++;
     if mouse_check_button_released(mb_left){
         swipe = false;
-        swipe_speed = point_distance (global.mxs,global.mys,global.mx,global.my)/swipe_time;
-        swipe_time = 0;
-        var i = scr_Swipe_Check(global.mxs,global.mys,global.mx,global.my); 
-            with (i) {
-                speed = other.swipe_speed;
-                direction=point_direction(global.mxs,global.mys,global.mx,global.my);
-                }
-            }
+       if (global.mxs &gt; global.mx) {
+       obj_player.x = 64;
+       obj_player.y = 64;
+       swipe_time = 0;
         }
+       if (global.mxs &lt; global.mx) {
+       obj_player.x = 500;
+       obj_player.y = 500;
+       swipe_time = 0;
+        }
+    }
+}
+
 </string>
           </argument>
         </arguments>
