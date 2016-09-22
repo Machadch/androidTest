@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>alarm[0] = 30;
-alarm[2] = 91;
+alarm[2] = 120;
 image_speed = 0.25;
 
 </string>
@@ -69,7 +69,7 @@ image_speed = 0.25;
             <kind>1</kind>
             <string>///Spawn white bullet
 instance_create(x,y,obj_bulletWhite);
-alarm[0]=30;
+alarm[0]=45;
 </string>
           </argument>
         </arguments>
@@ -94,7 +94,7 @@ alarm[0]=30;
             <kind>1</kind>
             <string>///Spawn black bullet
 instance_create(x,y,obj_bulletBlack);
-alarm[1]=30;
+alarm[1]=45;
 </string>
           </argument>
         </arguments>
