@@ -14,6 +14,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_Swipe_Check.gml</script>
+    <script>scripts\scr_newPlayerPosition.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>

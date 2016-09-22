@@ -34,6 +34,7 @@ global.my=0;
 global.mxs=0;
 global.mys=0;
 global.inst=0;
+global.playerPosition = 2;
 swipe=false;
 swipe_time=0;
 swipe_speed=0;
@@ -71,14 +72,10 @@ if swipe = true{
     if mouse_check_button_released(mb_left){
         swipe = false;
        if (global.mxs &gt; global.mx) {
-       obj_player.x = 64;
-       obj_player.y = 64;
-       swipe_time = 0;
+            scr_newPlayerPosition((global.playerPosition - 1));
         }
        if (global.mxs &lt; global.mx) {
-       obj_player.x = 500;
-       obj_player.y = 500;
-       swipe_time = 0;
+            scr_newPlayerPosition((global.playerPosition + 1));
         }
     }
 }
