@@ -6,22 +6,28 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_player</sprite>
-    <sprite>sprites\spr_playerFlipped</sprite>
+    <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_playerBlack</sprite>
     <sprite>sprites\spr_playerWhite</sprite>
+    <sprite>sprites\spr_blackBullet</sprite>
+    <sprite>sprites\spr_whiteBullet</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_Swipe_Check.gml</script>
     <script>scripts\scr_newPlayerPosition.gml</script>
+    <script>scripts\scr_checkCollisionColor.gml</script>
+    <script>scripts\scr_spawnYinYang.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_swipeControl</object>
     <object>objects\obj_wall</object>
+    <object>objects\obj_enemy</object>
+    <object>objects\obj_bulletBlack</object>
+    <object>objects\obj_bulletWhite</object>
+    <object>objects\obj_spawner</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_playField</room>
