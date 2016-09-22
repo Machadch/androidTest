@@ -72,14 +72,41 @@ if swipe = true{
     if mouse_check_button_released(mb_left){
         swipe = false;
        if (global.mxs &gt; global.mx) {
+            if ((global.mx - global.mxs) &lt; -250) {
             scr_newPlayerPosition((global.playerPosition - 1));
+            }
+            else if ((global.mx - global.mxs) &gt; -250) {
+            if (obj_player.sprite_index = spr_playerWhite){
+                    obj_player.sprite_index = spr_playerBlack;
+            }
+            else if (obj_player.sprite_index = spr_playerBlack){
+                obj_player.sprite_index = spr_playerWhite;
+            }
+            }
         }
        if (global.mxs &lt; global.mx) {
+           if ((global.mx - global.mxs) &gt; 250) {
             scr_newPlayerPosition((global.playerPosition + 1));
+            }
+            else if ((global.mx - global.mxs) &lt; 250) {
+            if (obj_player.sprite_index = spr_playerWhite){
+                    obj_player.sprite_index = spr_playerBlack;
+            }
+            else if (obj_player.sprite_index = spr_playerBlack){
+                obj_player.sprite_index = spr_playerWhite;
+            }
+            }
+        }
+        else if (global.mxs == global.mx) {
+            if (obj_player.sprite_index = spr_playerWhite){
+                    obj_player.sprite_index = spr_playerBlack;
+            }
+            else if (obj_player.sprite_index = spr_playerBlack){
+                obj_player.sprite_index = spr_playerWhite;
+            }
         }
     }
 }
-
 </string>
           </argument>
         </arguments>

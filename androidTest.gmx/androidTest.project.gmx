@@ -9,6 +9,8 @@
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_playerFlipped</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_playerBlack</sprite>
+    <sprite>sprites\spr_playerWhite</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
